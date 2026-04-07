@@ -1,63 +1,31 @@
-# SIWES Logbook Management System — Full-Stack Starter
+# SIWES Frontend Demo
 
-This is a full-stack starter for a SIWES Logbook Management System with:
+Frontend-only, defense-ready SIWES Logbook Management System demo built with React + Vite.
 
-- React + Vite frontend
-- Express backend
-- SQLite database
-- JWT authentication
-- Role-based access control
+## Features
+- Demo login for Student, Supervisor, and Admin
+- localStorage persistence
 - Student log submission
-- Supervisor review workflow
-- Admin overview
+- Supervisor approve/reject workflow
+- Admin analytics dashboard
+- PDF export via browser print dialog
+- Charts using Recharts
 
-## Roles
+## Demo Accounts
+- student@siwes.demo / 123456
+- supervisor@siwes.demo / 123456
+- admin@siwes.demo / 123456
 
-- `student`
-- `supervisor`
-- `admin`
-
-## Quick Start
-
-### Backend
+## Run locally
 ```bash
-cd backend
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Frontend
-```bash
-cd frontend
 npm install
 npm run dev
 ```
 
-## Default Seed Accounts
+## Build
+```bash
+npm run build
+```
 
-These are created automatically on first run:
-
-- Admin: `admin@siwes.local` / `password123`
-- Supervisor: `supervisor@siwes.local` / `password123`
-- Student: `student@siwes.local` / `password123`
-
-## API Summary
-
-- `POST /api/auth/register`
-- `POST /api/auth/login`
-- `GET /api/me`
-- `GET /api/logs`
-- `POST /api/logs`
-- `PUT /api/logs/:id`
-- `DELETE /api/logs/:id`
-- `GET /api/supervisor/queue`
-- `PATCH /api/supervisor/logs/:id/review`
-- `GET /api/admin/students`
-- `GET /api/admin/summary`
-
-## Notes
-
-- The backend uses `better-sqlite3` for simplicity.
-- File uploads are not implemented yet.
-- PDF export is not implemented yet.
+## Deploy on Vercel
+This frontend-only demo can be deployed directly on Vercel.
